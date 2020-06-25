@@ -55,8 +55,8 @@ public class NovoRoboServlet extends HttpServlet {
 			//o getRequestDispatcher(), é pegado o retorno dest método que é um RequestDispatcher
 			//e para prosseguir com a requisição é utilizado o método forward
 //			RequestDispatcher rd = req.getRequestDispatcher("/novoRoboCriado.jsp"); //aqui indica que a requisição deve ser enviada para a jsp
-																					//é um Request Client Side, o navegador que fará um redirecionamento
-//			RequestDispatcher rd = req.getRequestDispatcher("/listaRobos"); //intercomunicando com outro servlet, é um Request Server Side
+																					//é um Request client side, o navegador que fará um redirecionamento
+//			RequestDispatcher rd = req.getRequestDispatcher("/listaRobos"); //intercomunicando com outro servlet, é um Request server side
 			
 //			req.setAttribute("nome", nome); //inserindo informações no request
 //			req.setAttribute("marca", marca);

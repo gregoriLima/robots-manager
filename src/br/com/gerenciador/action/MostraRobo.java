@@ -10,9 +10,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
 
-public class MostraRobo {
+public class MostraRobo implements Action{
 
-	public void exec(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	public String exec(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("Action mostra robo");
 		
@@ -25,8 +25,10 @@ public class MostraRobo {
 		
 		request.setAttribute("robo", robo);
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraRobo.jsp");
-		rd.forward(request, response);
+//		RequestDispatcher rd = request.getRequestDispatcher("/formAlteraRobo.jsp");
+//		rd.forward(request, response);
+		
+		return "forward:formAlteraRobo.jsp";
 		
 	}
 

@@ -13,7 +13,7 @@ import javax.servlet.http.HttpServlet;
 
 //utilizando annotations para definir o nome da servlet na url
 @WebServlet(urlPatterns = "/ola") //loadOnStartup=1 instancia esta classe na subida do servidor
-public class ServletOne extends HttpServlet {
+public class ServletOne extends HttpServlet { //um Servlet deve extender HttpServlet
 
 	//Singleton - somente uma instância é criada pelo tomcat a partir da primeira requisição do browser. O objeto é reaproveitado pelo tomcat
 	//Singleton significa que o objeto vive para sempre. é o escopo

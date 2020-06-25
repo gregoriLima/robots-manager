@@ -8,9 +8,9 @@ import javax.servlet.http.HttpServletResponse;
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
 
-public class AlteraRobo {
+public class AlteraRobo implements Action {
 
-	public void exec(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String exec(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		
 		
 		
@@ -26,7 +26,7 @@ public class AlteraRobo {
 		robo.setMarca(marcaRobo);
 		robo.setModelo(modeloRobo);
 		
-		response.sendRedirect("entrada?action=ListaRobos");
+		return "redirect:entrada?action=ListaRobos";
 		
 	}
 

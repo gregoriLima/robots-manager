@@ -7,9 +7,9 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.gerenciador.model.Banco;
 
-public class RemoveRobo {
+public class RemoveRobo implements Action{
 
-	public void exec(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public String exec(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		System.out.println("Action removendo Robo");
 		
 		String paramId = request.getParameter("id");
@@ -17,7 +17,11 @@ public class RemoveRobo {
 		System.out.println(id);
 		Banco.removeRobo(id);
 		
-		response.sendRedirect("entrada?action=ListaRobos");
+		//aqui é feito a requisição pelo navegador
+//		response.sendRedirect("entrada?action=ListaRobos");
+		
+		return "redirect:entrada?action=ListaRobos";
+		
 		
 	}
 
