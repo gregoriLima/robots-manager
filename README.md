@@ -1,7 +1,7 @@
 # robots-manager
 A web application that manage inclusion of new robots in a company with MVC pattern using Java Servlets, JSP and MongoDB.
 
-### Advanced parallel and concurrent programmimg in java
+### Implemented in Java following the MVC architectural pattern, organized in layers, based on how Spring MVC works
 
 - MVC
 - Java 14
