@@ -16,3 +16,6 @@ A web application that manage inclusion of new robots in a company with MVC patt
 # Schema
 
 ![](https://github.com/gregoriLima/robots-manager/blob/master/Schema.png)
+
+
+ Grégori Fernandes de Lima
