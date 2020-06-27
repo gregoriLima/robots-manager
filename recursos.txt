@@ -1,0 +1,1 @@
+padrão DAO como modelo de classes de persistência

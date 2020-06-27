@@ -46,7 +46,7 @@ public class RoboService extends HttpServlet {
 //			response.setContentType("applicatoin/XML"); //definindo o tipo de conteúdo que o usuário está recebendo. Comentado para conseguir renderizar no navegador
 			response.getWriter().println(xml);//devolvendo a lista de robôs em um Json
 		}else { //caso o cliente não defina nem um xml nem um json
-		    response.setContentType("application/json");
+		    response.setContentType("application/json"); //definindo no cabeçalho do html o conteúdo da resposta
 		    response.getWriter().print("{'message':'no content'}");
 		}
 		
