@@ -12,9 +12,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 //Desabilitando para que o único servlet acessível seja o EntradaServlet e estes não estejam mais acessíveis
 //@WebServlet("/listaRobos")
+@Deprecated
 public class ListaRobosServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -24,8 +26,8 @@ public class ListaRobosServlet extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		//response.getWriter().append("Served at: ").append(request.getContextPath());
-		Banco banco = new Banco();
-		List<Robo> lista = banco.getListaRobos();
+		//Banco banco = new Banco();
+		List<Robo> lista = new RoboDao().getListaRobos();//banco.getListaRobos();
 	
 		
 		

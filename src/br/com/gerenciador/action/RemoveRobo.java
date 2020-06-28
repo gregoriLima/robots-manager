@@ -5,7 +5,7 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.gerenciador.model.Banco;
+import br.com.gerenciador.model.dao.RoboDao;
 
 public class RemoveRobo implements Action{
 
@@ -15,7 +15,8 @@ public class RemoveRobo implements Action{
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 		System.out.println(id);
-		Banco.removeRobo(id);
+//		Banco.removeRobo(id);
+		new RoboDao().removeRobo(id);
 		
 		//aqui é feito a requisição pelo navegador
 //		response.sendRedirect("entrada?action=ListaRobos");

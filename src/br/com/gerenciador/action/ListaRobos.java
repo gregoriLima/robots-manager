@@ -10,6 +10,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 //Este não é um servlet
 
@@ -24,8 +25,8 @@ public class ListaRobos implements Action{
 		
 		System.out.println("Action listando Robos");
 		
-		Banco banco = new Banco();
-		List<Robo> lista = banco.getListaRobos();
+		//Banco banco = new Banco();
+		List<Robo> lista = new RoboDao().getListaRobos(); //banco.getListaRobos();
 		
 		request.setAttribute("lista", lista);
 		

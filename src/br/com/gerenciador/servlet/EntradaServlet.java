@@ -6,18 +6,16 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 import br.com.gerenciador.action.Action;
 
 //Classe responsável por todo o fluxo de informações
 
 
 //@WebServlet("/entrada") //removido mapeamento pois a lógica foi implementada em um filtro
+@Deprecated
 public class EntradaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

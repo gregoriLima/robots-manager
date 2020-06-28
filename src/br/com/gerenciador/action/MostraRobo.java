@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 public class MostraRobo implements Action{
 
@@ -19,7 +20,7 @@ public class MostraRobo implements Action{
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 		
-		Robo robo = Banco.buscaRoboPeloId(id);
+		Robo robo = new RoboDao().buscaPeloId(id);//Banco.buscaRoboPeloId(id);
 		
 		System.out.println(robo.getNome());
 		

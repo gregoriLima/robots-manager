@@ -5,8 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 public class NovoRobo implements Action{
 
@@ -24,8 +24,10 @@ public class NovoRobo implements Action{
 		robo.setMarca(marca);
 		robo.setModelo(modelo);
 		
-		Banco banco = new Banco();
-		banco.adiciona(robo);
+//		Banco banco = new Banco();
+//		banco.adiciona(robo);
+		
+		new RoboDao().adiciona(robo);
 		
 		return "redirect:entrada?action=ListaRobos";
 		

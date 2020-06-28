@@ -14,6 +14,7 @@ import com.thoughtworks.xstream.XStream;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 
 @WebServlet("/robos")
@@ -27,7 +28,7 @@ public class RoboService extends HttpServlet {
 //		String valor = request.getHeader("accept");//pegando o valor do cabeçalho accept
 		String valor = request.getHeader("Accept");
 		
-		List<Robo> robos = new Banco().getListaRobos();
+		List<Robo> robos = new RoboDao().getListaRobos();
 		
 //		if(valor.endsWith("json")) {
 		if(valor.contains("json")) {

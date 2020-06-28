@@ -11,9 +11,11 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 //Desabilitando para que o único servlet acessível seja o EntradaServlet e estes não estejam mais acessíveis
 //@WebServlet("/mostraRobo")
+@Deprecated
 public class MostraRoboServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -23,7 +25,7 @@ public class MostraRoboServlet extends HttpServlet {
 		String paramId = request.getParameter("id");
 		Integer id = Integer.valueOf(paramId);
 		
-		Robo robo = Banco.buscaRoboPeloId(id);
+		Robo robo = new RoboDao().buscaPeloId(id);// Banco.buscaRoboPeloId(id);
 		
 		System.out.println(robo.getNome());
 		

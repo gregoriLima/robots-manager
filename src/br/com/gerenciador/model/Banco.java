@@ -3,6 +3,7 @@ package br.com.gerenciador.model;
 import java.util.ArrayList;
 import java.util.List;
 
+@Deprecated
 public class Banco {
 
 	private static List<Usuario> listaUsuario = new ArrayList<>();
@@ -56,13 +57,13 @@ public class Banco {
 
 	public static void removeRobo(Integer id) {
 
-		listaRobos.removeIf(n -> n.id == id); //remove um robô da lista dado o ID
+		listaRobos.removeIf(n -> n.getId() == id); //remove um robô da lista dado o ID
 		
 	}
 
 	public static Robo buscaRoboPeloId(Integer id) {
 		
-		return listaRobos.stream().filter(n -> n.id == id).findFirst().get();
+		return listaRobos.stream().filter(n -> n.getId() == id).findFirst().get();
 	}
 
 	public static Usuario existeUsuario(String nomeUsuario, String senhaUsuario) {

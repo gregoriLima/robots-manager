@@ -37,6 +37,8 @@ public class ControladorFiltro implements Filter {
 		
 		String paramAction = request.getParameter("action");//verifica a ação solicitada pelo navegador
 		
+		System.out.println("action vindo do cliente" + paramAction);
+		
 		String nome = null;
 	String nomeDaClasse = "br.com.gerenciador.action." + paramAction; //paramAction que vem do navegador
 		

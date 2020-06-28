@@ -7,17 +7,17 @@ public class Robo {
 
 	
 	
-	public int id;
+	private long _id;
 	private String nome;
 	private String marca;
 	private String modelo;
 	private LocalDate data = LocalDate.now();
 	
-	public int getId() {
-		return id;
+	public long getId() {
+		return _id;
 	}
-	public void setId(int id) {
-		this.id = id;
+	public void setId(long id) {
+		this._id = id;
 	}
 	public String getNome() {
 		return nome;

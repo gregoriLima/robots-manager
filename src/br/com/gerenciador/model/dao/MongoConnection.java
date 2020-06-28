@@ -10,6 +10,7 @@ import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.Usuario;
 
 public class MongoConnection{
 	
@@ -59,20 +60,28 @@ public class MongoConnection{
 	public static void main(String[] args) {
 
 		RoboDao rdao = new RoboDao(); 
-		Robo r = new Robo();
-		r.setMarca("Fanuc");
-		r.setModelo("2001");
-		r.setNome("Robo novo");
-		rdao.save(r);
+//		Robo r = new Robo();
+//		r.setMarca("Fanuc");
+//		r.setModelo("2001");
+//		r.setNome("Robo novo");
+//		rdao.adiciona(r);
 		
-//		EntityDao mongoDAO = new EntityDao(Robo.class);
-//		Map<String, String> mapa = new HashMap<>();
-//		mapa.put("testeff", "gregori");
-//		mongoDAO.save(mapa);
-//		System.out.println(mapa);
+		UsuarioDao udao = new UsuarioDao();
+//		Usuario usuario = new Usuario();
+//		usuario.setLogin("gregori");
+//		usuario.setSenha("1234");
+//		udao.adiciona(usuario);
+		
+		System.out.println(udao.getListaUsuarios());
+		
 		System.out.println(rdao.findAll());
 		
-		
+		Robo rob = rdao.getListaRobos().get(0);
+		System.out.println(rob.getNome());
+		rob.setNome("FFFFFFFFFF");
+		rdao.alteraRobo(rob);
+		rob = rdao.getListaRobos().get(0);
+		System.out.println(rob.getNome());
 		
 	}
 

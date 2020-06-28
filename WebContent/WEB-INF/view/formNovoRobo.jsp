@@ -12,15 +12,21 @@
 </head>
 <body>
 
+<br><br>
+
 	<form action="${linkServletNovoRobo}" method="post">
 
-        Nome: <input type="text" name="nome" /><br><br>
-        Marca: <input type="text" name="marca" /><br><br>
-        Modelo: <input type="text" name="modelo" /><br><br><br>
+        Nome: <input type="text" name="nome" required /><br><br>
+        Marca: <input type="text" name="marca" required /><br><br>
+        Modelo: <input type="text" name="modelo" required /><br><br><br>
 			<input type="hidden" name="action" value="NovoRobo" />
         <input type="submit" />
     </form>
     
+    <form action="${linkServletEntrada}" method="post">
+		<input type="hidden" name="action" value="ListaRobos" readonly>
+		<input type="submit" value="Cancelar" />
+	</form>
    
 
 

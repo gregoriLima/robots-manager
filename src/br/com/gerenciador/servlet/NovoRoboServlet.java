@@ -10,10 +10,12 @@ import javax.servlet.http.HttpServletResponse;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Robo;
+import br.com.gerenciador.model.dao.RoboDao;
 
 
 //Desabilitando para que o único servlet acessível seja o EntradaServlet e estes não estejam mais acessíveis
 //@WebServlet("/novoRobo")
+@Deprecated
 public class NovoRoboServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L; //variável opcional
 
@@ -35,8 +37,8 @@ public class NovoRoboServlet extends HttpServlet {
 			robo.setMarca(marca);
 			robo.setModelo(modelo);
 			
-			Banco banco = new Banco();
-			banco.adiciona(robo);
+			//Banco banco = new Banco();
+			new RoboDao().adiciona(robo);//banco.adiciona(robo);
 			
 			
 			

@@ -2,6 +2,7 @@ package br.com.gerenciador.model;
 
 public class Usuario {
 
+	private long _id;
     private String login;
     private String senha;
 
@@ -32,4 +33,12 @@ public class Usuario {
 
         return true;
     }
+
+	public long getId() {
+		return _id;
+	}
+
+	public void setId(long _id) {
+		this._id = _id;
+	}
 }

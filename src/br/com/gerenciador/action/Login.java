@@ -9,6 +9,7 @@ import javax.servlet.http.HttpSession;
 
 import br.com.gerenciador.model.Banco;
 import br.com.gerenciador.model.Usuario;
+import br.com.gerenciador.model.dao.UsuarioDao;
 
 public class Login implements Action {
 
@@ -18,9 +19,9 @@ public class Login implements Action {
 		String nomeUsuario = request.getParameter("login");
 		String senhaUsuario = request.getParameter("senha");
 		
-		Usuario usuario = Banco.existeUsuario(nomeUsuario, senhaUsuario);
+		Usuario usuario = new UsuarioDao().existeUsuario(nomeUsuario, senhaUsuario); //Banco.existeUsuario(nomeUsuario, senhaUsuario);
 		
-		System.out.println(usuario.getLogin());
+//		System.out.println(usuario.getLogin());
 		
 		if(usuario == null) 
 			return "redirect:entrada?action=LoginForm";

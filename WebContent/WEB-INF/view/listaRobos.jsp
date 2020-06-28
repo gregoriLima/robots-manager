@@ -5,6 +5,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 
+<c:url value="/entrada" var="linkServletEntrada" />
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,8 +15,14 @@
 </head>
 <body>
 	
-	<br>
-
+	<c:import url="parcialLogout.jsp"/>
+	
+	<form action="${linkServletEntrada}" method="post">
+		<input type="hidden" name="action" value="NovoRoboForm" readonly>
+		<input type="submit" value="Cadastrar novo robo" />
+	</form>
+	
+	
 	<c:if test="${empty lista}">
 
 		<br> Erro, nenhum robô cadastrado! <br>
@@ -28,7 +36,10 @@
 	<br>
 	<ul>
 		<c:forEach items="${lista}" var="robo">
-			<li>${robo.nome}<br> Criado em: ${robo.data} 
+			<li>Robo: ${robo.nome}<br> 
+				Marca: ${robo.marca } <br>
+				Modelo: ${robo.modelo } <br>
+				Criado em: ${robo.data} 
 				<a href="/gerenciador/entrada?action=MostraRobo&id=${robo.id}"> modificar </a>
 				<a href="/gerenciador/entrada?action=RemoveRobo&id=${robo.id}"> remover </a>
 			</li>
@@ -36,10 +47,13 @@
 		</c:forEach>
 	</ul>
 </c:if>
+
+	
+
 </body>
 
 
-<c:import url="parcialLogout.jsp"/>
+
     
     
    
