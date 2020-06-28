@@ -41,7 +41,8 @@ public class Login implements Action {
 														//o objeto HttpSession sempre será o mesmo.
 				sessao.setAttribute("usuarioLogado", usuario);
 				//A EL ${usuariologado.login} se não encontrar na request, procura na session
-				return "redirect:entrada?action=ListaRobos";
+//				return "redirect:entrada?action=ListaRobos";
+				return "forward:dashboard.jsp";
 				
 				//O tempo de vida (timeout) de um HttpSession no Tomcat9 é de 30 minutos por padrão. Caso não haja nenhum acesso,
 				//em 30 minutos o usuário é deslogado. O cookie é transiente, é um session cookie. Pode-se alterar pelo web.xml:

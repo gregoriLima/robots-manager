@@ -45,7 +45,7 @@ public class EntityDao implements IDao {
 	public void update(long id, Map mapEntity) {
 
 			////$set para indicar que é uma atualiação
-		mongoCollection.updateOne(Filters.eq("_id", id), new Document("$set", new Document(mapEntity)));
+		mongoCollection.updateOne(Filters.eq("_id", id), new Document("$set", new Document(mapEntity))); //$set para atualizar os campos passados em mapEntity apenas
 
 	}
 
@@ -53,6 +53,7 @@ public class EntityDao implements IDao {
 	public void delete(Map mapEntity) {
 			
 		mongoCollection.deleteOne(new BasicDBObject(mapEntity));
+	
 
 	}
 
