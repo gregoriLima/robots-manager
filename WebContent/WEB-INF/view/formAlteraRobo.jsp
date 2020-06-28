@@ -14,7 +14,11 @@
 
 <body>
 
+
+<c:import url="parcialLogout.jsp" />
+
 	Modificar o robô:
+	
 	<br>
 	<form action="${linkServletEntrada }" method="post">
 		<br> <input type="hidden" name="action" value="AlteraRobo" readonly> 
@@ -33,6 +37,5 @@
 
 </body>
 
-<c:import url="parcialLogout.jsp" />
 
 </html>

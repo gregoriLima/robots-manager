@@ -12,7 +12,13 @@
 </head>
 <body>
 
-<br><br>
+
+<c:import url="parcialLogout.jsp"/>
+
+
+	Cadastro de um novo robo:
+	
+	<br><br>
 
 	<form action="${linkServletNovoRobo}" method="post">
 
@@ -22,7 +28,7 @@
 			<input type="hidden" name="action" value="NovoRobo" />
         <input type="submit" />
     </form>
-    
+    <br>
     <form action="${linkServletEntrada}" method="post">
 		<input type="hidden" name="action" value="ListaRobos" readonly>
 		<input type="submit" value="Cancelar" />
@@ -32,5 +38,4 @@
 
 </body>
 
-<c:import url="parcialLogout.jsp"/>
 </html>
