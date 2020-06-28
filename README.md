@@ -6,7 +6,7 @@ A web application that manage inclusion of new robots in a company with MVC patt
 - MVC
 - Java 14
 - TomCat 9
-- MongoDB
+- MongoDB - CRUD with DAO pattern
 - JSP com scriptlets, EL e JSTL
 - HTML 5
 - One example with legacy xml configuration 
