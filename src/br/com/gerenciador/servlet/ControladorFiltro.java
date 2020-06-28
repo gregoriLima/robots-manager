@@ -29,7 +29,7 @@ public class ControladorFiltro implements Filter {
 	
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
 
-		System.out.println("Controlador filter");
+		System.out.println("#Controlador filter");
 		
 		//parsing dos objetos argumentos do método
 		HttpServletRequest request = (HttpServletRequest) servletRequest;

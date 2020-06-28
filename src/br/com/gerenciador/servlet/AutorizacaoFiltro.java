@@ -31,16 +31,21 @@ public class AutorizacaoFiltro implements Filter {
 
 	public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain chain) throws IOException, ServletException {
 
-		System.out.println("Autorização filter");
+		System.out.println("#Autorização filter");
 		
 		HttpServletRequest request = (HttpServletRequest) servletRequest;
         HttpServletResponse response = (HttpServletResponse) servletResponse;
 		
 		String paramAction = request.getParameter("action");//verifica a ação solicitada pelo navegador
 		
-		//determina se uma action é protegida ou não de acesso sem login
-		boolean actionProtected = !(paramAction.equals("LoginForm") || paramAction.equals("Login")); 
+		if(paramAction == null)
+			paramAction = "";
 		
+		System.out.println(">>>Ação pretendida: "+ paramAction);
+		//determina se uma action é protegida ou não de acesso sem login
+		//actions não protegidas:
+		boolean actionProtected = !(paramAction.equals("LoginForm") || paramAction.equals("Login") ||  paramAction.equals("NovoUsuarioForm") ||  paramAction.equals("NovoUsuario")); 
+		System.out.println("protegido: " + actionProtected);
 		HttpSession sessao = request.getSession();
 		
 		boolean naoLogado = sessao.getAttribute("usuarioLogado")==null; //verifica se há um usuário logado na sessão

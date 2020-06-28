@@ -17,10 +17,18 @@
         Login: <input type="text" name="login"  /><br><br>
         Senha: <input type="password" name="senha"  /><br><br>
 
-        <input type="hidden" name="action" value="Login" /> 
+<!--         <input type="hidden" name="action" value="Login" />  -->
 
-        <input type="submit" />
+		
+       &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+<!--        <input type="submit" name="action" value="Login" /> -->
+			<button type="submit" name="action" value="Login">Entrar</button>
+        &nbsp&nbsp
+        <button type="submit" name="action" value="NovoUsuarioForm">Novo usuário</button>
+      
     </form>
 
+		
+		
 </body>
 </html>
