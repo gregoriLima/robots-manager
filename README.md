@@ -16,9 +16,11 @@ A web application that manage inclusion of new robots in a company with MVC patt
 - Filters
 - Good pratices
 
+
 # Schema
 
 ![](https://github.com/gregoriLima/robots-manager/blob/master/Schema.png)
+
 
 
 # Index page after login page
@@ -26,9 +28,11 @@ A web application that manage inclusion of new robots in a company with MVC patt
 ![](https://github.com/gregoriLima/robots-manager/blob/master/index.png)
 
 
+
 # New robot registration
 
 ![](https://github.com/gregoriLima/robots-manager/blob/master/novorob.png)
+
 
 
 # List all robots registered
@@ -36,8 +40,11 @@ A web application that manage inclusion of new robots in a company with MVC patt
 ![](https://github.com/gregoriLima/robots-manager/blob/master/list.png)
 
 
+
 # GeoLocalization of each robot
 
 ![](https://github.com/gregoriLima/robots-manager/blob/master/geolocalization.png)
 
- Grégori Fernandes de Lima
+
+
+  Grégori Fernandes de Lima
