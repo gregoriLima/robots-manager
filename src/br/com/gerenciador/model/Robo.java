@@ -12,6 +12,7 @@ public class Robo {
 	private String marca;
 	private String modelo;
 	private LocalDate data = LocalDate.now();
+	private Position position;
 	
 	public long getId() {
 		return _id;

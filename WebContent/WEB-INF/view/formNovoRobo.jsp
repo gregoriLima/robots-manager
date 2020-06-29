@@ -6,14 +6,23 @@
 
 <c:url value="/entrada" var="linkServletEntrada" />
 
+<html xmlns:th="http://www.thymeleaf.org" >
+
 <!DOCTYPE html>
 <html>
 <head>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
 <title>Cadastro</title>
 
-
+<script type="text/javascript">
+function autoComplete(){
+	  var input = document.getElementById('endereco');
+	  autocomplete = new google.maps.places.Autocomplete(input);
+	}
+</script>
 </head>
 <body>
 
@@ -36,18 +45,26 @@
           </div>
           <div class="row">
             <div class="input-field col s12">
-<!--               <input id="dataNascimento" type="date" class="datepicker" th:field="*{dataNascimento}"   /> -->
+<!--               <input id="dataNascimento" type="date" class="datepicker" th:field="*{marca}"   /> -->
               <input type="text" name="marca" required />
               <label for="dataNascimento">Marca</label>
             </div>
           </div>
           <div class="row">
             <div class="input-field col s12">
-<!--               <input id="curso" type="text" class="validate" th:field="*{curso.nome}"  /> -->
+<!--               <input id="curso" type="text" class="validate" th:field="*{modelo}"  /> -->
 				<input type="text" name="modelo" required />
               <label for="curso">Modelo</label>
             </div>
           </div>
+
+		<div class="row">
+		  <div class="input-field col s12">
+<!-- 		    <input id="endereco" type="text" class="validate" th:field="*{endereco}"  /> -->
+				<input id="endereco" type="text" name="endereco" required />
+		    <label for="endereco">Endereço do depósito</label>
+		  </div>
+		</div>
 
         </div> <!-- Fim SECTION Dados Basicos -->
         
@@ -59,6 +76,8 @@
             <button class="btn waves-effect waves-light" type="submit" onclick="javascript:dashboard.submit()" value="Dashboard">Cancelar</button>
           </div>
         </div>
+        
+        
       </form>
       
       		    <form name='dashboard' action="${linkServletEntrada}" method="post" >
@@ -88,6 +107,16 @@
 <!-- 	</form> -->
    
 
+<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM2b_kGDubFBvJHaAqEG9FtdrchBqFz1Y&;libraries=places&;callback=autoComplete" async defer></script> -->
+<!-- 	   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM2b_kGDubFBvJHaAqEG9FtdrchBqFz1Y&amp;libraries=places&;callback=autoComplete" async defer></script> -->
+<!--   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM2b_kGDubFBvJHaAqEG9FtdrchBqFz1Y&amp;libraries=places&amp;callback=autoComplete" async defer></script> -->
+
+
+<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBfkB-U2jb53ACFhVgtBYhPCQ4ohhcqVEk&callback=autoComplete&libraries=places&v=weekly;callback=autoComplete"
+      defer
+    ></script>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

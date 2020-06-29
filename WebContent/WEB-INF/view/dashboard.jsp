@@ -23,14 +23,14 @@
 
     <h1 class="main-title center">Bem-vindo ao Sistema De Cadastro De Robôs</h1>
 
-    <div class="row center">
+    <div class="row center" >
         <div class="col s12 m4 l4 waves-effect waves-light">
           
           
            <a href="javascript:novo.submit()">
              
                 <div class="card-panel hoverable z-depth-1 center grey lighten-4" >
-                    <i class="large material-icons">perm_identity</i>
+                    <i class="large material-icons">input</i>
                     <div class="truncate">Cadastrar Robo</div>
                 </div>
    				<form name='novo' action="${linkServletEntrada}" method="post" >
@@ -41,10 +41,25 @@
         </div>
         
         
+        <div class="col s12 m4 l4 waves-effect waves-light">    
+           <a href="javascript:geo.submit()">          
+                <div class="card-panel hoverable z-depth-1 center grey lighten-4" >
+                    <i class="large material-icons">my_location</i>
+                    <div class="truncate">Pesquisar por Geolocalizacao</div>
+                </div>
+   				<form name='geo' action="${linkServletEntrada}" method="post" >
+					<input type="hidden" name="action" value="Geolocal">
+				</form>      
+            </a>
+        </div>
+        
+        	
+        
+        
           <div class="col s12 m4 l4 waves-effect waves-light">
    			 <a href="javascript:lista.submit()">
 	       		 <div class="card-panel hoverable z-depth-1 center grey lighten-4">
-		            <i class="large material-icons">search</i>
+		            <i class="large material-icons">list</i>
 		            <div class="truncate">Lista dos Robos</div>
 	       		 </div>
 	        
@@ -52,10 +67,10 @@
 						<input type="hidden" name="action" value="ListaRobos">
 					</form>
     		</a>
-</div>
+		</div>
+				
     </div>
-    
-    
+  
   
 
 
