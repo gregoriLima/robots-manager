@@ -17,34 +17,34 @@ A web application that manage inclusion of new robots in a company with MVC patt
 - Good pratices
 
 
-# -Schema:
+# Schema:
 ![](https://github.com/gregoriLima/robots-manager/blob/master/Schema.png)
 #
 
 
 
 
-# -Index page after login page:
+# Index page after login page:
 ![](https://github.com/gregoriLima/robots-manager/blob/master/index.png)
 #
 
 
 
 
-# -New robot registration:
+# New robot registration:
 ![](https://github.com/gregoriLima/robots-manager/blob/master/novorob.png)
 #
 
 
 
 
-# -List all robots registered:
+# List all robots registered:
 ![](https://github.com/gregoriLima/robots-manager/blob/master/list.png)
 #
 
 
 
-# -GeoLocalization of each robot
+# GeoLocalization of each robot
 ![](https://github.com/gregoriLima/robots-manager/blob/master/geolocalization.png)
 #
 
